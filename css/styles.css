@@ -642,6 +642,7 @@ textarea {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
+  margin-bottom: 16px;
 }
 
 .foot-modal-email {
@@ -658,7 +659,6 @@ textarea {
   letter-spacing: 0.04em;
   padding-left: 16px;
   margin-right: 24px;
-  margin-top: 16px;
   color: #ffffff;
   outline: none;
 }
@@ -672,6 +672,7 @@ textarea {
 }
 
 .subscribe-primary-btn {
+  font-family: "Roboto";
   display: flex;
   justify-content: center;
   border: none;
@@ -687,7 +688,6 @@ textarea {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
-  margin-top: 16px;
 }
 
 .subscribe-primary-btn svg {
@@ -739,6 +739,7 @@ textarea {
   padding: 72px 24px 24px;
   background-color: #fcfcfc;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 16px;
 }
 
 .modal-close-btn {
@@ -859,6 +860,7 @@ textarea {
   padding-left: 24px;
   padding-right: 24px;
   color: #fcfcfc;
+  position: absolute;
 }
 
 .inform {
@@ -878,6 +880,7 @@ textarea {
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: block;
+  position: relative;
 }
 
 .inform:focus-within,
@@ -889,6 +892,9 @@ textarea {
   color: #4d5ae5;
 }
 
+.inform-last:focus {
+  background-color: #4d5ae5;
+}
 .modul-box {
   margin-bottom: 16px;
 }
@@ -955,7 +961,7 @@ textarea {
   align-items: center;
   justify-content: center;
   fill: transparent;
-  border: 1px solid #8e8f99;
+  border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
 }
 
