@@ -609,9 +609,6 @@ textarea {
   height: 40px;
 }
 
-.container-subscribe {
-  max-width: 453px;
-}
 .icon-link-foot {
   width: 100%;
   height: 100%;
@@ -626,17 +623,31 @@ textarea {
 
 .form-subscribe {
   background: transparent;
+  display: flex;
+  max-width: 453px;
+  gap: 24px;
 }
 
-.form-subscribe-email {
-  margin-right: 24px;
+.subscribe-container {
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 0;
+}
+
+.subscribe {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
 }
 
 .foot-modal-email {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   border: 1px solid #fff;
   border-radius: 4px;
-  padding: 8px 16px;
   width: 264px;
   height: 40px;
   background: transparent;
@@ -645,6 +656,11 @@ textarea {
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
+  padding-left: 16px;
+  margin-right: 24px;
+  margin-top: 16px;
+  color: #ffffff;
+  outline: none;
 }
 
 .foot-modal-email::placeholder {
@@ -664,39 +680,23 @@ textarea {
   padding: 8px 8px 8px 24px;
   align-items: center;
   background-color: #4d5ae5;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
+  margin-top: 16px;
 }
 
 .subscribe-primary-btn svg {
   margin-left: 16px;
 }
 
-.subscribe-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-
 .icon-link-foot:hover,
 .icon-link-foot:focus {
   background-color: #31d0aa;
-}
-
-.subscribe {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #fff;
-  max-width: 453px;
-  margin-bottom: 16px;
 }
 
 .subscribe-plane {
@@ -715,7 +715,9 @@ textarea {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opasity 250ms ease-in-out;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-open {
   opacity: 1;
@@ -724,6 +726,7 @@ textarea {
 }
 
 .modal {
+  position: absolute;
   width: 408px;
   min-height: 584px;
   border-radius: 4px;
@@ -735,33 +738,44 @@ textarea {
   transform: translate(-50%, -50%);
   padding: 72px 24px 24px;
   background-color: #fcfcfc;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   margin-left: auto;
   fill: #2e2f42;
   top: 24px;
-  border-radius: 100%;
+  border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   right: 24px;
   position: absolute;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 24px;
   height: 24px;
   background-color: #e7e9fc;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover {
   background-color: #404bbf;
+  border: none;
+}
+
+.modal-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
 }
 
 .modal-close-btn svg {
   fill: #2e2f42;
   width: 8px;
   height: 8px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-btn:hover svg,
 .modal-close-btn:focus svg {
@@ -778,7 +792,7 @@ textarea {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .modal-title {
@@ -801,6 +815,8 @@ textarea {
   letter-spacing: 0.04em;
   color: #8e8f99;
   outline: transparent;
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-icon {
@@ -874,7 +890,7 @@ textarea {
 }
 
 .modul-box {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .modal-input:focus {
@@ -899,6 +915,8 @@ textarea {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-comment::placeholder {
@@ -943,12 +961,13 @@ textarea {
 
 .modal-check:checked + .modal-check-text span {
   fill: #f4f4fd;
-  border: 1px solid #404bbf;
+  border: none;
   background-color: #404bbf;
 }
 
 .modal-primary-btn {
   min-width: 169px;
+  height: 56px;
   border-radius: 4px;
   background-color: #4d5ae5;
   color: #ffffff;
@@ -961,9 +980,9 @@ textarea {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   padding: 16px 32px;
-  justify-content: center;
-  display: flex;
-  align-items: center;
+  display: block;
+  margin-top: 24px;
+  margin: auto;
 }
 
 .modal-primary-btn:hover,
@@ -977,6 +996,7 @@ textarea {
   gap: 8px;
   width: 100%;
   margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .modal-vector {
@@ -995,12 +1015,14 @@ textarea {
   height: 16px;
   border-radius: 2px;
   fill: transparent;
-  border: 1px solid #8e8f99;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-button-wrapper {
-  width: 100%;
+.subscribe-input-button {
   display: flex;
-  justify-content: center;
-  margin-top: 24px;
+  align-items: center;
+  gap: 8px;
 }
