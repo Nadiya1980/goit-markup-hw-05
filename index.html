@@ -342,26 +342,22 @@
                 </ul>
             </div>
 
-            <div class="container-subscribe">
+            <div class="subscribe-container">
+                <p class="subscribe">Subscribe</p>
+                <form class="form-subscribe" name="form-subscribe" autocomplete="off" novalidate="">
+                    <label class="subscribe-input-but">
+                        <input type="email" class="foot-modal-email" name="e-mail" placeholder="E-mail" required
+                            id="e-mail"></label>
+                    <button type="submit" class="subscribe-primary-btn">Subscribe
+                        <svg class="subscribe-plane" width="24" height="20">
+                            <use href="./images/icons.svg#icon-plane"></use>
+                        </svg></button>
 
-
-                <div class="subscribe-container">
-                    <p class="subscribe">Subscribe</p>
-                    <form class="form-subscribe" name="form-subscribe" autocomplete="off" novalidate="">
-                        <label class="subscribe-input-but">
-                            <input type="email" class="foot-modal-email" name="e-mail" placeholder="E-mail" required
-                                id="e-mail"></label>
-                        <button type="submit" class="subscribe-primary-btn">Subscribe
-                            <svg class="subscribe-plane" width="24" height="20">
-                                <use href="./images/icons.svg#icon-plane"></use>
-                            </svg></button>
-
-                    </form>
-                </div>
+                </form>
             </div>
         </div>
     </footer>
-    <div class="backdrop">
+    <div class="backdrop is-open">
         <div class="modal">
             <button type="button" class="modal-close-btn">
                 <svg class="icon icon-close-black-btn" width="8" height="8">
