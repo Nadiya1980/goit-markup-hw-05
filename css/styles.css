@@ -861,7 +861,7 @@ textarea {
   margin-bottom: 4px;
   display: block;
 }
-.inform-last {
+/*.inform-last {
   margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
@@ -870,7 +870,7 @@ textarea {
   color: #8e8f99;
   display: block;
   position: relative;
-}
+}*/
 
 .inform:focus-within,
 .inform-last:focus-within,
