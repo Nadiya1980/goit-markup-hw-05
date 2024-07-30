@@ -672,7 +672,7 @@ textarea {
 .subscribe-primary-btn {
   font-family: "Roboto", sans-serif;
   display: flex;
-  /* justify-content: center;*/
+  justify-content: center;
   border: none;
   cursor: pointer;
   border-radius: 4px;
