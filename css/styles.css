@@ -632,8 +632,6 @@ textarea {
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
-  margin-left: 0;
 }
 
 .subscribe {
@@ -658,7 +656,7 @@ textarea {
   line-height: 2;
   letter-spacing: 0.04em;
   padding-left: 16px;
-  margin-right: 24px;
+  /*margin-right: 24px;*/
   color: #ffffff;
   outline: none;
 }
@@ -674,11 +672,11 @@ textarea {
 .subscribe-primary-btn {
   font-family: "Roboto", sans-serif;
   display: flex;
-  justify-content: center;
+  /* justify-content: center;*/
   border: none;
   cursor: pointer;
   border-radius: 4px;
-  padding: 8px 8px 8px 24px;
+  padding: 8px 24px;
   align-items: center;
   background-color: #4d5ae5;
   min-width: 165px;
@@ -691,6 +689,9 @@ textarea {
 }
 
 .subscribe-primary-btn svg {
+  /*align-items: center;
+  flex-direction: column;
+  justify-content: space-between;*/
   margin-left: 16px;
 }
 
@@ -861,16 +862,6 @@ textarea {
   margin-bottom: 4px;
   display: block;
 }
-/*.inform-last {
-  margin-bottom: 4px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-  display: block;
-  position: relative;
-}*/
 
 .inform:focus-within,
 .inform-last:focus-within,
@@ -1020,5 +1011,5 @@ textarea {
 .subscribe-input-but {
   display: flex;
   align-items: center;
-  gap: 8px;
+  /*gap: 8px;*/
 }
